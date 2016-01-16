@@ -13,6 +13,7 @@
 		52F96CD01C48B7190073D354 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F96CCF1C48B7190073D354 /* Assets.xcassets */; };
 		52F96CD31C48B7190073D354 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F96CD11C48B7190073D354 /* LaunchScreen.storyboard */; };
 		52F96CDE1C48B7190073D354 /* hw01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F96CDD1C48B7190073D354 /* hw01Tests.swift */; };
+		52F96CED1C4A27090073D354 /* Fermon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F96CEC1C4A27090073D354 /* Fermon.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		52F96CD91C48B7190073D354 /* hw01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hw01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F96CDD1C48B7190073D354 /* hw01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hw01Tests.swift; sourceTree = "<group>"; };
 		52F96CDF1C48B7190073D354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52F96CEC1C4A27090073D354 /* Fermon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Fermon.jpg; path = hw01/Fermon.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		52F96CBC1C48B7190073D354 = {
 			isa = PBXGroup;
 			children = (
+				52F96CEC1C4A27090073D354 /* Fermon.jpg */,
 				52F96CC71C48B7190073D354 /* hw01 */,
 				52F96CDC1C48B7190073D354 /* hw01Tests */,
 				52F96CC61C48B7190073D354 /* Products */,
@@ -178,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F96CED1C4A27090073D354 /* Fermon.jpg in Resources */,
 				52F96CD31C48B7190073D354 /* LaunchScreen.storyboard in Resources */,
 				52F96CD01C48B7190073D354 /* Assets.xcassets in Resources */,
 				52F96CCE1C48B7190073D354 /* Main.storyboard in Resources */,
