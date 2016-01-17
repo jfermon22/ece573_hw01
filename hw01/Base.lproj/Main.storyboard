@@ -20,19 +20,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Fermon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ICI-0j-B0H">
                                 <rect key="frame" x="160" y="129" width="300" height="342"/>
                             </imageView>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xb3-dq-gMm">
+                            <stackView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xb3-dq-gMm">
                                 <rect key="frame" x="258" y="279" width="105" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeff Fermon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKf-uU-SfB">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ECE573 hw01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mJ-BK-mN4">
                                         <rect key="frame" x="0.0" y="21" width="105" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -51,10 +51,22 @@
                             <outletCollection property="gestureRecognizers" destination="o1F-OD-mW1" appends="YES" id="npo-SA-Or6"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="assignmentText" destination="xb3-dq-gMm" id="W8L-5j-GSJ"/>
+                        <outlet property="image" destination="ICI-0j-B0H" id="Y9v-dY-NSZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="O7R-sb-4U7"/>
-                <pinchGestureRecognizer id="o1F-OD-mW1"/>
+                <tapGestureRecognizer id="O7R-sb-4U7">
+                    <connections>
+                        <action selector="tapDetected:" destination="BYZ-38-t0r" id="nI2-gZ-7Ua"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="o1F-OD-mW1">
+                    <connections>
+                        <action selector="pinchDetected:" destination="BYZ-38-t0r" id="jOO-la-oyf"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="360" y="490"/>
         </scene>

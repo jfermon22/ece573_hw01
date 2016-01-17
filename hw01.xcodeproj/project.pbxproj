@@ -339,6 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.FermonJeff.hw01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -353,6 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.FermonJeff.hw01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -399,6 +401,7 @@
 				52F96CE41C48B7190073D354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52F96CE51C48B7190073D354 /* Build configuration list for PBXNativeTarget "hw01Tests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +410,7 @@
 				52F96CE71C48B7190073D354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
