@@ -12,8 +12,9 @@ class ViewController: UIViewController {
     //MARK: properties
     @IBOutlet var image: UIImageView!
     @IBOutlet var assignmentText: UIStackView!
-    var delay = 0
     var labelHideTimer: NSTimer? = nil
+    
+    
     //MARK: methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,33 +25,53 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    //method to handle actions when tap is detected
     @IBAction func tapDetected(sender: UITapGestureRecognizer) {
-        assignmentText.hidden = !assignmentText.hidden;
         print("got tap")
+        
+        //toggle text display
+        assignmentText.hidden = !assignmentText.hidden;
+        
+        //reset timer to 3 seconds
         resetLabelTimer()
     }
 
+    //method tohandle actions when pinch detected
     @IBAction func pinchDetected(sender: UIPinchGestureRecognizer) {
         print("got pinch");
+        
+        //change scale of image
         image.transform = CGAffineTransformScale(image.transform, sender.scale, sender.scale)
         sender.scale = 1
+        
+        //reset timer to 3 seconds
         resetLabelTimer()
     }
     
+    //method to hide label if it is not already hidden
     func hideLabel() {
+        print("hide label")
         if !assignmentText.hidden
         {
             assignmentText.hidden = true
         }
-
-        print("hide label")
     }
     
+    //helper method to reset timer
     func resetLabelTimer()
     {
-        labelHideTimer?.invalidate()
-         labelHideTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector:"hideLabel", userInfo: nil, repeats: false)
+        //check if timer already set
+        if let _ = labelHideTimer {
+            print("reset timer")
+            //turn timer off
+            labelHideTimer?.invalidate()
+        }
+        
+        //if text visible, set timer to hide it in 3 seconds
+        if !assignmentText.hidden {
+            labelHideTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector:"hideLabel", userInfo: nil, repeats: false)
+        }
     }
 }
 
